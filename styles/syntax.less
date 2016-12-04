@@ -1,0 +1,423 @@
+@import 'colors';
+@import 'syntax-variables';
+
+.comment {
+    color: @gray;
+}
+
+.entity {
+    color: @white;
+
+    &.name{
+        &.type {
+            color: @white;
+
+            &.class {
+                color: @violet;
+            }
+
+            &.operator {
+                color: @red;
+            }
+
+        }
+
+        &.function {
+            color: @yellow;
+        }
+
+        &.tag {
+            color: @orange;
+
+            &.meta-tag {
+                color: @violet;
+            }
+        }
+
+        &.include {
+            color: @violet;
+        }
+    }
+
+    &.other.inherited-class {
+        color: @violet;
+    }
+
+    &.other.attribute-name {
+        color: @green;
+
+        &.label {
+            color: @magenta;
+            //font-style: italic;
+        }
+    }
+
+    &.name.tag.namespace,
+    &.other.attribute-name.namespace {
+        color: @violet;
+    }
+}
+
+
+.keyword {
+    color: @light-white;
+    font-weight: bold;
+
+    &.control {
+        color: @light-white;
+        font-weight: bold;
+    }
+
+    &.operator {
+        color: @light-white;
+        font-weight: bold;
+    }
+}
+
+.storage {
+    color: @white;
+    font-weight: bold;
+
+    &.modifier {
+        color: @white;
+        font-weight: bold;
+    }
+}
+
+.constant {
+    color: @cyan;
+
+    &.numeric {
+        color: @cyan;
+    }
+
+    &.language {
+        color: @light-blue;
+        font-weight: bold;
+    }
+
+    &.character.escape {
+        color: @cyan;
+        font-weight: bold;
+    }
+}
+
+.variable {
+    color: @red;
+
+    &.other {
+
+        &.object {
+            &.property {
+                color: @green;
+            }
+        }
+
+        &.property {
+            color: @green;
+        }
+    }
+}
+
+.invalid {
+    color: @light-white;
+    background-color: @dark-red;
+
+    &.illegal {
+        color: @light-white;
+        background-color: @red;
+    }
+
+    &.deprecated {
+        color: @light-white;
+        background-color: @dark-yellow;
+    }
+}
+
+.string {
+    color: @blue;
+
+    .constant {
+        color: @light-blue;
+    }
+
+    &.regexp {
+        color: #E9C062;
+
+        .constant.character.escape,
+        .source.ruby.embedded,
+        .string.regexp.arbitrary-repetition {
+            color: #FF8000;
+        }
+
+        &.group {
+            color: #C6A24F;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        &.character-class {
+            color: #B18A3D;
+        }
+    }
+
+    .variable {
+        color: @magenta;
+    }
+
+    .markup {
+        color: @light-cyan;
+        font-weight: bold;
+
+        &.black {
+            color: @gray;
+        }
+        &.dark-gray {
+            color: @light-gray;
+        }
+        &.white {
+            color: @white;
+        }
+        &.light-white {
+            color: @light-white;
+        }
+        &.red {
+            color: @red;
+        }
+        &.light-red {
+            color: @light-red;
+        }
+        &.green {
+            color: @green;
+        }
+        &.light-green {
+            color: @light-green;
+        }
+        &.yellow {
+            color: @yellow;
+        }
+        &.light-yellow {
+            color: @light-yellow;
+        }
+        &.blue {
+            color: @blue;
+        }
+        &.light-blue {
+            color: @light-blue;
+        }
+        &.violet {
+            color: @violet;
+        }
+        &.light-violet {
+            color: @light-violet;
+        }
+        &.cyan {
+            color: @cyan;
+        }
+        &.light-cyan {
+            color: @light-cyan;
+        }
+
+        &.bold {
+            color: @light-white;
+        }
+        &.dim {
+            color: @gray;
+        }
+    }
+
+    .entity.name.type.operator {
+        color: @glaucous;
+    }
+
+    // String interpolation in Ruby, CoffeeScript, and others
+    .meta.embedded.line {
+        color: @dark-blue;
+    }
+
+    .punctuation.section.embedded {
+        color: @light-magenta;
+        font-weight: bold;
+
+        .source {
+            color: @dark-cyan;  // Required for the end of embedded strings in Ruby #716
+        }
+    }
+}
+
+.support {
+    color: @violet;
+
+    &.function {
+        color: @light-yellow;
+        font-weight: bold;
+    }
+
+    &.constant {
+        color: @light-cyan;
+        font-weight: bold;
+    }
+
+    &.type.property-name.css {
+        color: @light-white;
+        //font-weight: bold;
+    }
+}
+
+.punctuation {
+    color: @white;
+
+    &.string {
+        color: @light-white;
+        font-weight: bold;
+    }
+
+    &.definition {
+        color: @light-white;
+        font-weight: bold;
+
+        &.comment {
+            color: @gray;
+            font-weight: bold;
+        }
+
+        &.variable {
+            color: @light-red;
+            font-weight: bold;
+        }
+
+        &.class {
+            color: @light-violet;
+            font-weight: bold;
+        }
+
+        &.operator {
+            color: @light-red;
+            font-weight: bold;
+        }
+
+        &.tag {
+            color: @light-orange;
+            font-weight: bold;
+
+            &.meta-tag {
+                color: @light-violet;
+                font-weight: bold;
+            }
+        }
+
+        &.separator {
+            color: @light-white;
+            font-weight: bold;
+
+            &.key-value {
+                color: @light-white;
+                font-weight: bold;
+            }
+        }
+
+        &.entry {
+            color: @light-white;
+            font-weight: bold;
+        }
+
+        &.include {
+            color: @light-violet;
+            font-weight: bold;
+        }
+    }
+}
+
+.meta {
+
+    &.expression {
+        color: @light-violet;
+    }
+
+    &.preprocessor.c {
+        color: @gray;
+    }
+
+    &.preprocessor.c .keyword {
+        color: @gray;
+        font-weight: bold;
+    }
+
+    &.cast {
+        color: @white;
+    }
+
+    &.sgml.html .meta.doctype,
+    &.sgml.html .meta.doctype .entity,
+    &.sgml.html .meta.doctype .string,
+    &.xml-processing,
+    &.xml-processing .entity,
+    &.xml-processing .string {
+        color: @gray;
+    }
+
+    &.tag .entity,
+    &.tag > .punctuation,
+    &.tag.inline .entity {
+        color: @blue;
+    }
+    &.tag .name,
+    &.tag.inline .name,
+    &.tag > .punctuation {
+        color: @blue;
+    }
+
+    &.selector.css .entity.name.tag {
+        text-decoration: underline;
+        color: @blue;
+    }
+
+    &.selector.css .entity.other.attribute-name.tag.pseudo-class {
+        color: @dark-green;
+    }
+
+    &.selector.css .entity.other.attribute-name.id {
+        color: @cyan;
+    }
+
+    &.selector.css .entity.other.attribute-name.class {
+        color: @light-cyan;
+    }
+
+    &.property-group .support.constant.property-value.css,
+    &.property-value .support.constant.property-value.css {
+        color: @light-yellow;
+    }
+
+    &.preprocessor.at-rule .keyword.control.at-rule {
+        color: @blue;
+    }
+
+    &.property-value .support.constant.named-color.css,
+    &.property-value .constant {
+        color: @cyan;
+    }
+
+    &.constructor.argument.css {
+        color: @green;
+    }
+
+    &.diff,
+    &.diff.header {
+        color: @light-white;
+        background-color: @dark-gray;
+    }
+
+    &.separator {
+        color: @green;
+        background-color: @dark-gray;
+    }
+
+    &.line.entry.logfile,
+    &.line.exit.logfile {
+        background-color: rgba(238, 238, 238, 0.16);
+    }
+
+    &.line.error.logfile {
+        background-color: @red;
+    }
+}
