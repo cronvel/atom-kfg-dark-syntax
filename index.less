@@ -1,110 +1,23 @@
-@import 'colors';
-@import 'syntax-variables';
-@import 'syntax';
 
-atom-text-editor, :host {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
-  line-height: 1.2em;
+// Atom Syntax Theme: One
 
-  .invisible-character {
-    color: @syntax-invisible-character-color;
-  }
+@import "styles/syntax-variables.less";
 
-  .indent-guide {
-    color: @syntax-indent-guide-color;
-  }
+@import "styles/editor.less";
 
-  .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
-  }
-
-  .gutter {
-    background-color: @syntax-gutter-background-color;
-  }
-  .gutter .cursor-line {
-    background-color: @syntax-gutter-background-color-selected;
-  }
-  .line-number.cursor-line-no-selection {
-    background-color: @syntax-gutter-background-color-selected;
-  }
-
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: #fba0e3;
-  }
-
-  .invisible {
-    color: @syntax-text-color;
-  }
-
-  .cursor {
-    border-color: @syntax-cursor-color;
-  }
-
-  .selection .region {
-    background-color: @syntax-selection-color;
-  }
-
-  // Markdown Styles
-
-  .source.gfm {
-    color: #999;
-  }
-
-  .gfm {
-    .markup.heading {
-      color: #eee;
-    }
-
-    .link {
-      color: #555;
-    }
-
-    .variable.list,
-    .support.quote {
-      color: #555;
-    }
-
-    .link .entity {
-      color: #ddd;
-    }
-
-    .raw {
-      color: #aaa;
-    }
-  }
-
-  .markdown {
-    .paragraph {
-      color: #999;
-    }
-
-    .heading {
-      color: #eee;
-    }
-
-    .raw {
-      color: #aaa;
-    }
-
-    .link {
-      color: #555;
-
-      .string {
-        color: #555;
-
-        &.title {
-          color: #ddd;
-        }
-      }
-    }
-  }
-}
-
-.bracket-matcher .region {
-  border-bottom: 1px solid #f8de7e;
-  margin-top: -1px;
-  opacity: .7;
-}
+@import "styles/syntax/_base.less";
+@import "styles/syntax/c.less";
+@import "styles/syntax/cpp.less";
+@import "styles/syntax/cs.less";
+@import "styles/syntax/css.less";
+@import "styles/syntax/elixir.less";
+@import "styles/syntax/gfm.less";
+@import "styles/syntax/go.less";
+@import "styles/syntax/ini.less";
+@import "styles/syntax/java.less";
+@import "styles/syntax/javascript.less";
+@import "styles/syntax/json.less";
+@import "styles/syntax/ng.less";
+@import "styles/syntax/ruby.less";
+@import "styles/syntax/php.less";
+@import "styles/syntax/python.less";
