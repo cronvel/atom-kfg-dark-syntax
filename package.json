@@ -1,7 +1,7 @@
 {
   "name": "kfg-dark-syntax",
   "theme": "syntax",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Atom Dark Syntax theme support KFG and Spellcast!",
   "license": "MIT",
   "engines": {
